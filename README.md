@@ -2,6 +2,8 @@
 
 Project for CS4641 Group 40 with Evan Montoya, Ganesh Murugappan, Jason Lee, Charles Luo, and Justin Blalock.
 
+Video: https://youtu.be/oLWvsiqNnOE 
+
 ## Introduction
 The music streaming industry has exhibited explosive growth with the increasing digitization of entertainment. The leading streaming company, Spotify, generated over 2.68 billion USD in the 2nd quarter of 2021. Their success is in large part due to both their music catalog and their ability to successfully recommend music; thus, predictive models and relevant data are integral to differentiate themselves from their competition.  
 
