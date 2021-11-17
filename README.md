@@ -28,7 +28,7 @@ Following this, we began to focus on feature engineering. Firstly, categorical f
 
 Following these fixes, we then normalized and balanced the dataset. To normalize our data, we used MinMaxScaler to scale and translate every feature between 0 and 1, and they previously had inconsisten scale and distribution. Given that our dataset already consists of over 10,000 songs per genre, the data is already balanced.
 
-#### Data visualization
+### Data visualization
 The cross correlation matrix for the data was constructed using the seaborn package and may be seen below. 
 
 ![cs4641 Heat Map](https://user-images.githubusercontent.com/52206987/142122779-c2072db3-94dd-48bf-968d-6102e207908d.png)
@@ -50,6 +50,11 @@ Following this, we were ready to begin applying the ML algorithms themselves. Fo
 ![cs4641randomforest](https://user-images.githubusercontent.com/52206987/142121286-487eee83-c7db-4e5c-b133-b78d1800a92e.png)
 
 At the moment, our current accuracy has only been capable of reaching 45%. While an improvement over random selection, we are currently limited by the features that were extracted from the spotify API. To make our model more accureate, we intend to do a spectrogram analysis to ideally extract more information to classify songs. This would consist of normalizing the spectrogram against volume and combining it with the existing spotify data.
+
+### Neural Network
+We created a neural network with 4 hidden layers all using the ReLU as an activation function.
+
+Our highest accuracy using this method was 45.2%. For the final project we plan on tuning the hyperparameters such as number of hidden layers, number of neurons in each layer, and the activation function used. Though, for both supervised methods, the models aren't doing too badly. There are 14 genres which means random guesses would yield an accuracy of ~7%. So, perhaps the issue is the lack of information provided by our features. Below we examine ways to remedy this issue.
 
 ## Timeline and Responsibilities
 We will have our data cleaned and processed by October 25th. We intend to have the implementation of our first approach by November 8, 2021. We will aim to be able to compare the effectiveness of several approaches by November 28, 2021. We will then have sufficient time to consolidate and write up our results before the deadline. These deadlines will allow us the necessary time to elaborate and improve upon the project before the respective deadlines. With respect to the distribution of our responsibilities, we intend to have each individual focus on a particular approach. Justin Blalock will primarily be responsible for data processing and managing the GitHub. Charlie and Jason will be responsible for working on analyzing actual audio samples. Ganesh will be in charge of the neural networks. Evan will work on the Decision Tree and dimensionality reduction. These responsibilities are subject to change.
