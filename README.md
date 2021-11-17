@@ -48,10 +48,10 @@ We can visualize the mistakes our model is making with a confusion matrix.
 
 ![Confusion Matrix](confusionmatrix_image.png)
 
-As we can see, the model has difficulty telling the difference between similar genres like Hip-Hop and Rap or Dance and Pop. This is expected and this combined with the f1 score shows that perhaps our model could use more complexity. That comes with hyperparameter tuning such as the depth of the random forest.
+As we can see, the model has difficulty telling the difference between similar genres like Hip-Hop and Rap or Dance and Pop. This is expected and this combined with the f1 score shows that perhaps our model could use more complexity because its precision and recall is struggling. That comes with hyperparameter tuning such as the depth of the random forest.
 
 ### Neural Network
-We created a neural network with 4 hidden layers all using the ReLU as an activation function.
+We created a neural network with 4 hidden layers all using ReLU as an activation function except the output layer which uses softmax.
 
 ![Neural Network](Unknown-3.png)
 
