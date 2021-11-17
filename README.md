@@ -50,7 +50,9 @@ Following this, we were ready to begin applying the ML algorithms themselves. Fo
 ![cs4641randomforest](https://user-images.githubusercontent.com/52206987/142121286-487eee83-c7db-4e5c-b133-b78d1800a92e.png)
 
 We can visualize the mistakes our model is making with a confusion matrix.
+
 ![Confusion Matrix](confusionmatrix_image.png)
+
 As we can see, the model has difficulty telling the difference between similar genres like Hip-Hop and Rap or Dance and Pop. This is expected and this combined with the f1 score shows that perhaps our model could use more complexity. That comes with hyperparameter tuning such as the depth of the random forest.
 
 At the moment, our current accuracy has only been capable of reaching 45%. While an improvement over random selection, we are currently limited by the features that were extracted from the spotify API. To make our model more accureate, we intend to do a spectrogram analysis to ideally extract more information to classify songs. This would consist of normalizing the spectrogram against volume and combining it with the existing spotify data.
