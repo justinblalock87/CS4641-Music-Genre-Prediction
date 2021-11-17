@@ -37,7 +37,7 @@ After our data was fully cleaned, we found through a PCA analysis that we only n
 
 ![scree (1)](https://user-images.githubusercontent.com/52206987/142089842-aba671d9-b6b4-4809-9268-a90d47384b2f.jpeg)
 
-## Supervised Methods
+## Results
 
 ### Random Forest
 Following this, we were ready to begin applying the ML algorithms themselves. For the midpoint, we focused on two supervised learning algorithms, one of which is RandomForestClassifier. To do this, we capitalized on the sklearn library amd applied a RandomForestClassifier to our dataset, which yielded an accuracy of 45.9%. In addition, we had an f1 score of .44. While not ideal, it demonstrates potential which we will expand upon by the final report. 
