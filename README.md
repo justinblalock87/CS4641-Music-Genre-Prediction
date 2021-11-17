@@ -58,6 +58,8 @@ Following this, we were ready to begin applying the ML algorithms themselves. Fo
 
 ![cs4641randomforest](https://user-images.githubusercontent.com/52206987/142121286-487eee83-c7db-4e5c-b133-b78d1800a92e.png)
 
+At the moment, our current accuracy has only been capable of reaching 45%. While an improvement over random selection, we are currently limited by the features that were extracted from the spotify API. To make our model more accureate, we intend to do a spectrogram analysis to ideally extract more information to classify songs. This would consist of normalizing the spectrogram against volume and combining it with the existing spotify data.
+
 ## References
 - G. Tzanetakis and P. Cook. Musical genre classification of audio signals. IEEE Transactions on Speech and Audio Processing, 10(5):293–302, July 2002.
 - Hareesh Bahuleyan. Music genre classification using machine learning techniques. CoRR, abs/1804.01149, 2018. 
