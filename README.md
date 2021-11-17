@@ -12,9 +12,6 @@ The music streaming industry has exhibited explosive growth with the increasing 
 ## Problem Definition
 Using the attributes of songs on Spotify, we would like to predict a song’s genre based on its features. There exists a plethora of available data describing specific songs that Spotify provides and uses for its categorization and recommendation systems, and we plan to use that for our classification task. We would also like to perform evaluation of similarity between songs, in order to categorize them for a potential recommendation system.
 
-## Potential Results and Discussion
-We will train our models on the data mentioned and analyze the relationship between the relevant variables, eventually resulting in a probability that a song is in a particular genre. Through this, we hope to find the best model for this song classification task, and ideally achieve a model that reaches the human benchmark for this classification task.
-
 ## Data Collection
 The data that we will use is sourced from Kaggle under “Spotify Tracks DB”. The dataset contains about 10,000 songs per genre with 26 genres (232,725 total songs) and was obtained using the Spotify API. Each data entry contains 18 relevant variables, with 14 core features including energy, danceability, duration, etc. If we need more data, we can also get these same attributes for songs from the Spotify API.
 
