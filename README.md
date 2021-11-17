@@ -53,7 +53,7 @@ At the moment, our current accuracy has only been capable of reaching 45%. While
 
 ### Neural Network
 We created a neural network with 4 hidden layers all using the ReLU as an activation function.
-
+![Neural Network](Unknown-3.png)
 Our highest accuracy using this method was 45.2%. For the final project we plan on tuning the hyperparameters such as number of hidden layers, number of neurons in each layer, and the activation function used. Though, for both supervised methods, the models aren't doing too badly. There are 14 genres which means random guesses would yield an accuracy of ~7%. So, perhaps the issue is the lack of information provided by our features. Below we examine ways to remedy this issue.
 
 ## Timeline and Responsibilities
