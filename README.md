@@ -47,6 +47,8 @@ Following this, we began to focus on feature engineering. Firstly, categorical f
 Following these fixes, we then normalized and balanced the dataset. To normalize our data, we used MinMaxScaler to scale and translate every feature between 0 and 1, and they previously had inconsisten scale and distribution. Given that our dataset already consists of over 10,000 songs per genre, the data is already balanced.
 
 ## Methods
-After our data was fully cleaned, we found through a PCA analysis that we only needed 12 out of our 14 features to retain 99% of the variance in our data, as seen below.
+After our data was fully cleaned, we found through a PCA analysis that we only needed 12 out of our 14 features to retain 99% of the variance in our data. Thus, we were able to further eliminate two unnecessary features.
+
 ![scree (1)](https://user-images.githubusercontent.com/52206987/142089842-aba671d9-b6b4-4809-9268-a90d47384b2f.jpeg)
 
+Following this, we were ready to begin applying the ML algorithms themselves. For the midpoint, we focused on implementing one Supervised Learning algorithm: RandomForestClassifier. To do this, we capitalized on the sklearn library amd applied a RandomForestClassifier to our dataset, which yielded an accuracy of 45.9%.
