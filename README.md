@@ -61,6 +61,7 @@ Our highest accuracy using this method was 45.2%. For the final project we plan 
 We switched to the GTZAN dataset (http://marsyas.info/downloads/datasets.html). This dataset consists of 10 genres, 100 audio files per genre, and 30 seconds for each audio file. From here, we obtained a dataset with features extracted from the audio file (https://www.kaggle.com/andradaolteanu/gtzan-dataset-music-genre-classification) and used features_3_seconds. This dataset has the same format in its features, but each 30 second clip was split into ten 3 second subsections. This ultimately increases the amount of data by a factor of ten. More data will allow our models to be trained with greater accuracy. This dataset took the .wav files, transformed them into a spectrogram, and then extracted features from the spectrogram and the .wav files. 
 
 General Data Overview             |  Data Categories
+:-------------------------:|:-------------------------:
 ![cs4641spectro](https://user-images.githubusercontent.com/52206987/144924139-ece35a4c-386c-4979-9147-d3829e9ea221.png)  |  ![cs4641pca](https://user-images.githubusercontent.com/52206987/144924572-08a19eb0-3913-4910-8d1f-d93f3cebec66.png)
 
 
