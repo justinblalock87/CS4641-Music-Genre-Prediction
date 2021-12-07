@@ -84,7 +84,7 @@ We then trained the model using 70% of the data, used 10% as a means of validati
 
 ![model_history_plot](model_history.png)
 
-Additionally, we applied random forest to our model to achieve 86% accuracy and an f1 score of .86. We tuned the hyperparameter for the depth of the tree and saw diminishing returns after a depth of 30.
+Additionally, we applied random forest to our model to achieve 86% accuracy (82% accuracy without normalization, as shown in the video) and an f1 score of .86. We tuned the hyperparameter for the depth of the tree and saw diminishing returns after a depth of 30.
 
 Here is a view of the forest. While the data is illegible, this image shows the complexity of the classification task.
 
@@ -93,7 +93,7 @@ Here is a view of the forest. While the data is illegible, this image shows the 
 Additionaly, we applied logistic regression to our new dataset and obtained 67% accuracy.
 
 ## Discussion
-Changing our dataset drastically improved the accuracy of our model. When working with GTZAN, our neural network was by far our most accurate model, yielding an accuracy of 91%. Our random forest model produced results of 86% accuracy, with logistic regression lagging behind slightly at 67%. On one hand, the random forest had great precision and recall. But ultimately, we would consider our neural network to be successful at its target task of accurately classifying the genre of a song. Additionally, we tuned the hyperparameters as mentioned in the last section to obtain optimal models. Tuning the hyperparameters allows us to, of course, select the parameters that perform best for the model and data. It also helps to prevent overfitting, which was an issue for us at first. At an accuracy of 91%, it is possible that our model would see some success for assisting in music recommendation algorithms. 
+Changing our dataset drastically improved the accuracy of our model. When working with GTZAN, our neural network was by far our most accurate model, yielding an accuracy of 91%. Our random forest model produced results of 86% accuracy (82% accuracy without normalization, as shown in the video), with logistic regression lagging behind slightly at 67%. On one hand, the random forest had great precision and recall. But ultimately, we would consider our neural network to be successful at its target task of accurately classifying the genre of a song. Additionally, we tuned the hyperparameters as mentioned in the last section to obtain optimal models. Tuning the hyperparameters allows us to, of course, select the parameters that perform best for the model and data. It also helps to prevent overfitting, which was an issue for us at first. At an accuracy of 91%, it is possible that our model would see some success for assisting in music recommendation algorithms. 
 
 ## Conclusion
 In future studies, it could be useful to work on classifying subgenres or increasing the size of the dataset. Furthermore, there is great promise in converting audio files to Mel spectrograms and feeding those images to convolutional neural networks. Spectrogram analysis yields a lot of information. Finally, compared to other methods of genre classification, we believe our method is among the most accurate and reliable since we used features that closely reflected raw audio and used a network that mirrored this complexity.
