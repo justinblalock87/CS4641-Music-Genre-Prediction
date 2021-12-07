@@ -40,7 +40,7 @@ After our data was fully cleaned, we found through a PCA analysis that we only n
 ## Preliminary Results
 
 ### Random Forest
-Following this, we were ready to begin applying the ML algorithms themselves. For the midpoint, we focused on two supervised learning algorithms, one of which is RandomForestClassifier. To do this, we capitalized on the sklearn library amd applied a RandomForestClassifier to our dataset, which yielded an accuracy of 45.9%. In addition, we had an f1 score of .44. While not ideal, it demonstrates potential which we will expand upon by the final report. 
+Following this, we were ready to begin applying the ML algorithms themselves. For the midpoint, we focused on two supervised learning algorithms, one of which is RandomForestClassifier. To do this, we capitalized on the sklearn library amd applied a RandomForestClassifier to our dataset, which yielded an accuracy of 45.9%. In addition, we had an f1 score of .44. While not ideal, we will expand on this and make random forest better in part 2 (continue reading).
 
 ![cs4641randomforest](https://user-images.githubusercontent.com/52206987/142121286-487eee83-c7db-4e5c-b133-b78d1800a92e.png)
 
@@ -48,7 +48,7 @@ We can visualize the mistakes our model is making with a confusion matrix.
 
 ![Confusion Matrix](confusionmatrix_image.png)
 
-As we can see, the model has difficulty telling the difference between similar genres like Hip-Hop and Rap or Dance and Pop. This is expected and this combined with the f1 score shows that perhaps our model could use more complexity because its precision and recall is struggling. That comes with hyperparameter tuning such as the depth of the random forest.
+As we can see, the model has difficulty telling the difference between similar genres like Hip-Hop and Rap or Dance and Pop. This is expected and this combined with the f1 score shows that perhaps our model could use more complexity because its precision and recall is struggling.
 
 ### Neural Network
 We created a neural network with 4 hidden layers all using ReLU as an activation function except the output layer which uses softmax.
@@ -58,7 +58,7 @@ We created a neural network with 4 hidden layers all using ReLU as an activation
 Our highest accuracy using this method was 45.2%. For both supervised methods, the models aren't doing terribly. There are 14 genres which means random guesses would yield an accuracy of ~7%. We suspect the main issue to be the lack of information provided by our features. Many of the features like 'dancability' were abitrary and uninformative. Because of this, we decided to begin analyzing raw audio files instead. 
 
 ## A New Dataset
-We switched to the GTZAN dataset (http://marsyas.info/downloads/datasets.html). This dataset consists of 10 genres, 100 audio files per genre, and 30 seconds for each audio file. From here, we obtained a dataset with low-level features such as chroma features and spectral centroid information extracted from the audio file (https://www.kaggle.com/andradaolteanu/gtzan-dataset-music-genre-classification). Additionally, our dataset was expanded such that 30 second audio clip was split into ten 3 second subsections. This ultimately increases the amount of data by a factor of ten. More data will allow our models to be trained with greater accuracy. In sum, the difference between this dataset and our previous dataset is that this one has features that literally extracted audio signals whilst the other dataset had quasi-features that were moreso engineered into being.
+We switched to the GTZAN dataset (http://marsyas.info/downloads/datasets.html). This dataset consists of 10 genres, 100 audio files per genre, and 30 seconds for each audio file. From here, we obtained a dataset with low-level features such as chroma features and spectral centroid information extracted from the audio files (https://www.kaggle.com/andradaolteanu/gtzan-dataset-music-genre-classification). Additionally, our dataset was expanded such that each 30 second audio clip was split into ten 3 second subsections. This ultimately increases the amount of data by a factor of ten. More data will allow our models to be trained with greater accuracy. In sum, the difference between this dataset and our previous dataset is that this one has features that literally extract audio signals whilst the other dataset had quasi-features that were moreso engineered into being.
 
 General Data Visualization             |  Data Features
 :-------------------------:|:-------------------------:
@@ -68,7 +68,7 @@ General Data Visualization             |  Data Features
 
 ### Data cleaning, Preprocessing/Feature Engineering, and Dimensionality Reduction (Again)
 
-In a similar manner to our previous dataset, we first cleaned the data and then performed some feature engineering. We got rid of the filename and length features, as they were all the same length and filename is a string value. Furthermore, we ensure that there were no null or NA values. Fortunately, the data was already balanced, so from here we simply had to normalize the data. Once again, we used MinMaxScaler to scale and translate the features between 0 and 1, as this controls for inconsistent scale and distrubtion. 
+In a similar manner to our previous dataset, we first cleaned the data and then performed some feature engineering. We got rid of the filename and length features, as they were all the same length and filename is a string value. Furthermore, we ensure that there were no null or NA values. Fortunately, the data was already balanced, so from here we simply had to normalize the data. Once again, we used MinMaxScaler to scale and translate the features between 0 and 1, as this controls for inconsistent scale and distrubtion. Finally, we encoded the genres since they were strings.
 
 Once everything was normalized and controlled, we applied PCA on the data as there were 57 features. Setting PCA to retain 99% variance reduced the total number of features to 47. 
 
@@ -90,13 +90,13 @@ Here is a view of the forest. While the data is illegible, this image shows the 
 
 ![new_data_forest](new_data_forest.png)
 
-Additionaly, we applied logistic regression to our new dataset and obtained 67% accuracy, respectively.
+Additionaly, we applied logistic regression to our new dataset and obtained 67% accuracy.
 
 ## Discussion
 Changing our dataset drastically improved the accuracy of our model. When working with GTZAN, our neural network was by far our most accurate model, yielding an accuracy of 91%. Our random forest model produced results of 86% accuracy, with logistic regression lagging behind slightly at 67%. On one hand, the random forest had great precision and recall. But ultimately, we would consider our neural network to be successful at its target task of accurately classifying the genre of a song. Additionally, we tuned the hyperparameters as mentioned in the last section to obtain optimal models. Tuning the hyperparameters allows us to, of course, select the parameters that perform best for the model and data. It also helps to prevent overfitting, which was an issue for us at first. At an accuracy of 91%, it is possible that our model would see some success for assisting in music recommendation algorithms. 
 
 ## Conclusion
-In future studies, it could be useful to work on classifying subgenres or increasing the size of the dataset. Furthermore, there is great promise in converting audio files to Mel spectrograms and feeding those to convolutional neural networks. Spectrogram analysis yields a lot of information. Finally, compared to other methods of genre classification, we believe our method is among the most accurate and reliable since we used features that closely reflected raw audio and used a network that mirrred this complexity.
+In future studies, it could be useful to work on classifying subgenres or increasing the size of the dataset. Furthermore, there is great promise in converting audio files to Mel spectrograms and feeding those images to convolutional neural networks. Spectrogram analysis yields a lot of information. Finally, compared to other methods of genre classification, we believe our method is among the most accurate and reliable since we used features that closely reflected raw audio and used a network that mirrored this complexity.
 
 ## Timeline and Responsibilities
 We will have our data cleaned and processed by October 25th. We intend to have the implementation of our first approach by November 8, 2021. We will aim to be able to compare the effectiveness of several approaches by November 28, 2021. We will then have sufficient time to consolidate and write up our results before the deadline. These deadlines will allow us the necessary time to elaborate and improve upon the project before the respective deadlines. With respect to the distribution of our responsibilities, we intend to have each individual focus on a particular approach. Justin Blalock will primarily be responsible for data processing and managing the GitHub. Charlie and Jason will be responsible for working on analyzing actual audio samples. Ganesh will be in charge of the neural networks. Evan will work on the Decision Tree and dimensionality reduction. These responsibilities are subject to change.
