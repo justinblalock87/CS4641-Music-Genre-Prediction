@@ -62,7 +62,7 @@ We switched to the GTZAN dataset (http://marsyas.info/downloads/datasets.html). 
 
 General Data Visualization             |  Data Features
 :-------------------------:|:-------------------------:
-![caplot_of_data](catplot.png)  |  ![features](box_features.png)
+![caplot_of_data](catplot.png)  |  ![features](box_features.png=250x100)
 
 ## Methods Part 2
 
