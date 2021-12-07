@@ -65,19 +65,24 @@ General Data Overview             |  Data Categories
 ![cs4641spectro](https://user-images.githubusercontent.com/52206987/144924139-ece35a4c-386c-4979-9147-d3829e9ea221.png)  |  ![cs4641pca](https://user-images.githubusercontent.com/52206987/144924572-08a19eb0-3913-4910-8d1f-d93f3cebec66.png)
 
 
+### Data cleaning, Preprocessing/Feature Engineering, and Dimensionality Reduction (Again)
 
+In a similar manner to our previous dataset, we first cleaned the data and then performed some feature engineering. We got rid of the filename and length features, as they were all the same length and filename is a string value. Furthermore, we ensure that there were no null or NA values. Fortunately, the data was already balanced, so from here we simply had to normalize the data. Once again, we used MinMaxScaler to scale and translate the features between 0 and 1, as this controls for inconsistent scale and distrubtion. 
 
-In a similar manner to our previous dataset, we cleaned the data and used feature engineering by getting rid of the filename and length, as they were all the same length. Furthermore, we ensure that there were no null or NA values. Fortunately, the data was already balanced, so from here we simply had to normalize the data. Once again, we used MinMaxScaler to scale and translate the features between 0 and 1, as this controls for inconsistent scale and distrubtion. Once everything was normalized and controlled, we applied PCA on the data as there were 57 features. Setting PCA to retain 99% variance reduced the total number of features to 43. 
+Once everything was normalized and controlled, we applied PCA on the data as there were 57 features. Setting PCA to retain 99% variance reduced the total number of features to 47. 
 
-We began by creating a new CNN. Firstly, we created a model and used different hperparameters such as the number of nodes in the first and second hidden layer and the learning rate by using keras-tuner.
+### New Neural Network
+
+We began by creating a new neural network.
 
 ![cs4641cnnTraining](https://user-images.githubusercontent.com/52206987/144925992-783df712-91e6-41b1-a15a-1bb4b8e70a36.png)
 
+We then trained the model using 70% of the data, used 10% as a means of validation, and tested it on 20% of the data. This yielded a final accuracy of 91%.
 
-We then trained the model using 70% of the data, used 10% as a means of validation, and tested it on 20% of the data. This yielded a final accuracy of 91%. Additionaly, we applied RandomForest and LogisticRegression to our new dataset, and yielded 82% and 67% accuracy, respectively.
+Additionaly, we applied RandomForest and LogisticRegression to our new dataset, and yielded 82% and 67% accuracy, respectively.
 
 ## Discussion
-Changing our dataset drastically improved the accuracy of our model. When working with GTZAN, our Convolutional Neural Network was by far our most accurate model, yielding an accuracy of 91%. Our RandomForest Algorithm produced results of 82% accuract, with LogisticRegression lagging behind slightly at 67%. Ultimately, we would consider our CNN to be successful at its target task of accurately classifying the genre of a song. The accuracy of our models increased consistently as we modified them and our datasets. At an accuracy of 91%, it is possible that our model would see some success for assisting in music recommendation algorithms. In future studies, it could be useful to work on classifying subgenres or increasing the size of the dataset. 
+Changing our dataset drastically improved the accuracy of our model. When working with GTZAN, our neural network was by far our most accurate model, yielding an accuracy of 91%. Our RandomForest Algorithm produced results of 82% accuracy, with LogisticRegression lagging behind slightly at 67%. Ultimately, we would consider our CNN to be successful at its target task of accurately classifying the genre of a song. The accuracy of our models increased consistently as we modified them and our datasets. At an accuracy of 91%, it is possible that our model would see some success for assisting in music recommendation algorithms. In future studies, it could be useful to work on classifying subgenres or increasing the size of the dataset. 
 
 ## Timeline and Responsibilities
 We will have our data cleaned and processed by October 25th. We intend to have the implementation of our first approach by November 8, 2021. We will aim to be able to compare the effectiveness of several approaches by November 28, 2021. We will then have sufficient time to consolidate and write up our results before the deadline. These deadlines will allow us the necessary time to elaborate and improve upon the project before the respective deadlines. With respect to the distribution of our responsibilities, we intend to have each individual focus on a particular approach. Justin Blalock will primarily be responsible for data processing and managing the GitHub. Charlie and Jason will be responsible for working on analyzing actual audio samples. Ganesh will be in charge of the neural networks. Evan will work on the Decision Tree and dimensionality reduction. These responsibilities are subject to change.
