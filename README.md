@@ -15,7 +15,7 @@ Using the attributes of songs on Spotify, we would like to predict a song’s ge
 ## Data Collection
 The data that we will use is sourced from Kaggle under “Spotify Tracks DB”. The dataset contains about 10,000 songs per genre with 26 genres (232,725 total songs) and was obtained using the Spotify API. Each data entry contains 18 relevant variables, with 14 core features including energy, danceability, duration, etc. If we need more data, we can also get these same attributes for songs from the Spotify API.
 
-## Methods
+## Methods Part 1
 
 ### Data cleaning
 To clean the data, we began by ensuring that all features had no NaN or Null values in order to ensure consistency across entries. Following this, we eliminated either esoteric genres such as "Ska" or quasi-genres such as "Movie" in order to focus on more relevant genres. Additional cleaning occured in the form of encoding categorical features (key and time signature) to numerical ones and eliminating data that contained nulls or nans so that each element in our dataset can be used with confidence. 
@@ -37,7 +37,7 @@ After our data was fully cleaned, we found through a PCA analysis that we only n
 
 ![scree (1)](https://user-images.githubusercontent.com/52206987/142089842-aba671d9-b6b4-4809-9268-a90d47384b2f.jpeg)
 
-## Results
+## Preliminary Results
 
 ### Random Forest
 Following this, we were ready to begin applying the ML algorithms themselves. For the midpoint, we focused on two supervised learning algorithms, one of which is RandomForestClassifier. To do this, we capitalized on the sklearn library amd applied a RandomForestClassifier to our dataset, which yielded an accuracy of 45.9%. In addition, we had an f1 score of .44. While not ideal, it demonstrates potential which we will expand upon by the final report. 
@@ -64,6 +64,7 @@ General Data Visualization             |  Data Features
 :-------------------------:|:-------------------------:
 ![caplot_of_data](catplot.png)  |  ![features](box_features.png)
 
+## Methods Part 2
 
 ### Data cleaning, Preprocessing/Feature Engineering, and Dimensionality Reduction (Again)
 
