@@ -77,7 +77,11 @@ We began by creating a new neural network.
 
 ![cs4641cnnTraining](https://user-images.githubusercontent.com/52206987/144925992-783df712-91e6-41b1-a15a-1bb4b8e70a36.png)
 
+To tune the hyperparameters of our model, we used keras-tuner and we tuned the number of nodes in the first and second layers of the network as well as the learning rate.
+
 We then trained the model using 70% of the data, used 10% as a means of validation, and tested it on 20% of the data. This yielded a final accuracy of 91%.
+
+![model_history_plot](model_history.png)
 
 Additionaly, we applied RandomForest and LogisticRegression to our new dataset, and yielded 82% and 67% accuracy, respectively.
 
