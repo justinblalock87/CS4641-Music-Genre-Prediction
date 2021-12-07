@@ -70,7 +70,7 @@ General Data Visualization             |  Data Features
 
 In a similar manner to our previous dataset, we first cleaned the data and then performed some feature engineering. We got rid of the filename and length features, as they were all the same length and filename is a string value. Furthermore, we ensure that there were no null or NA values. Fortunately, the data was already balanced, so from here we simply had to normalize the data. Once again, we used MinMaxScaler to scale and translate the features between 0 and 1, as this controls for inconsistent scale and distrubtion. Finally, we encoded the genres since they were strings.
 
-Once everything was normalized and controlled, we applied PCA on the data as there were 57 features. Setting PCA to retain 99% variance reduced the total number of features to 47 (43 in the video but the final model uses 47 because of slight changes in the feature engineering).
+Once everything was normalized and controlled, we applied PCA on the data as there were 57 features. Setting PCA to retain 99% variance reduced the total number of features to 47 (43 in the video but the final model uses 47 because of slight changes in the feature engineering explained above).
 
 ### New Neural Network
 
