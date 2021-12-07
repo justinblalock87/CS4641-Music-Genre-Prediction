@@ -83,15 +83,18 @@ We then trained the model using 70% of the data, used 10% as a means of validati
 
 ![model_history_plot](model_history.png)
 
-Additionally, we applied random forest to our model to achieve 86% accuracy. We tuned the hyperparameter for the depth of the tree and saw diminishing returns after a depth of 30.
+Additionally, we applied random forest to our model to achieve 86% accuracy and an f1 score of .86. We tuned the hyperparameter for the depth of the tree and saw diminishing returns after a depth of 30.
+
+Here is a view of the forest. While the data is illegible, this image shows the complexity of the classification task.
 
 ![new_data_forest](new_data_forest.png)
-*While the data is illegible, this image shows the complexity of the classification task
 
-Additionaly, we applied RandomForest and LogisticRegression to our new dataset, and yielded 82% and 67% accuracy, respectively.
+Additionaly, we applied logistic regression to our new dataset and obtained 67% accuracy, respectively.
 
 ## Discussion
-Changing our dataset drastically improved the accuracy of our model. When working with GTZAN, our neural network was by far our most accurate model, yielding an accuracy of 91%. Our RandomForest Algorithm produced results of 82% accuracy, with LogisticRegression lagging behind slightly at 67%. Ultimately, we would consider our CNN to be successful at its target task of accurately classifying the genre of a song. The accuracy of our models increased consistently as we modified them and our datasets. At an accuracy of 91%, it is possible that our model would see some success for assisting in music recommendation algorithms. In future studies, it could be useful to work on classifying subgenres or increasing the size of the dataset. 
+Changing our dataset drastically improved the accuracy of our model. When working with GTZAN, our neural network was by far our most accurate model, yielding an accuracy of 91%. Our random forest model produced results of 86% accuracy, with logistic regression lagging behind slightly at 67%. On one hand, the random forest had great precision and recall. But ultimately, we would consider our neural network to be successful at its target task of accurately classifying the genre of a song. Additionally, we tuned the hyperparameters as mentioned in the last section to obtain optimal models. Tuning the hyperparameters allows us to, of course, select the parameters that perform best for the model and data. It also helps to prevent overfitting, which was an issue for us at first. At an accuracy of 91%, it is possible that our model would see some success for assisting in music recommendation algorithms. 
+
+In future studies, it could be useful to work on classifying subgenres or increasing the size of the dataset. Furthermore, there is great promise in converting audio files to Mel spectrograms and feeding those to convolutional neural networks. Spectrogram analysis yields a lot of information.
 
 ## Timeline and Responsibilities
 We will have our data cleaned and processed by October 25th. We intend to have the implementation of our first approach by November 8, 2021. We will aim to be able to compare the effectiveness of several approaches by November 28, 2021. We will then have sufficient time to consolidate and write up our results before the deadline. These deadlines will allow us the necessary time to elaborate and improve upon the project before the respective deadlines. With respect to the distribution of our responsibilities, we intend to have each individual focus on a particular approach. Justin Blalock will primarily be responsible for data processing and managing the GitHub. Charlie and Jason will be responsible for working on analyzing actual audio samples. Ganesh will be in charge of the neural networks. Evan will work on the Decision Tree and dimensionality reduction. These responsibilities are subject to change.
