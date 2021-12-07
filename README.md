@@ -83,6 +83,11 @@ We then trained the model using 70% of the data, used 10% as a means of validati
 
 ![model_history_plot](model_history.png)
 
+Additionally, we applied random forest to our model to achieve 86% accuracy. We tuned the hyperparameter for the depth of the tree and saw diminishing returns after a depth of 30.
+
+![new_data_forest](new_data_forest.png)
+*While the data is illegible, this image shows the complexity of the classification task
+
 Additionaly, we applied RandomForest and LogisticRegression to our new dataset, and yielded 82% and 67% accuracy, respectively.
 
 ## Discussion
